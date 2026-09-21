@@ -1,14 +1,14 @@
-#import "XYHSettingsViewController.h"
+#import "XYABSettingsViewController.h"
 
-static NSString * const kDomain    = @"im.mjh.fishhook";
+static NSString * const kDomain    = @"im.mjh.xianyuadblock";
 static NSString * const kKeySplash = @"splashAdBlocked";
 static NSString * const kKeyFeedAd = @"feedAdFilterEnabled";
 
-@interface XYHSettingsViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface XYABSettingsViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
 @end
 
-@implementation XYHSettingsViewController
+@implementation XYABSettingsViewController
 
 + (BOOL)_getBool:(NSString *)key default:(BOOL)def {
     CFPreferencesAppSynchronize((__bridge CFStringRef)kDomain);
@@ -31,7 +31,7 @@ static NSString * const kKeyFeedAd = @"feedAdFilterEnabled";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"咸鱼助手";
+    self.title = @"闲鱼去广告助手";
     self.view.backgroundColor = [UIColor systemGroupedBackgroundColor];
 
     self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleInsetGrouped];
@@ -51,7 +51,7 @@ static NSString * const kKeyFeedAd = @"feedAdFilterEnabled";
 
     UIView *header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 100)];
     UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(0, 24, header.bounds.size.width, 30)];
-    title.text = @"🐟 咸鱼助手";
+    title.text = @"🐟 闲鱼去广告助手";
     title.font = [UIFont boldSystemFontOfSize:24];
     title.textAlignment = NSTextAlignmentCenter;
     [header addSubview:title];
@@ -84,12 +84,12 @@ static NSString * const kKeyFeedAd = @"feedAdFilterEnabled";
     if (ip.row == 0) {
         cell.textLabel.text = @"去除开屏广告";
         cell.detailTextLabel.text = @"启动时跳过广告页面";
-        sw.on = [XYHSettingsViewController isSplashAdBlocked];
+        sw.on = [XYABSettingsViewController isSplashAdBlocked];
         [sw addTarget:self action:@selector(toggleSplash:) forControlEvents:UIControlEventValueChanged];
     } else {
         cell.textLabel.text = @"过滤广告商品";
         cell.detailTextLabel.text = @"隐藏搜索结果中的广告商品";
-        sw.on = [XYHSettingsViewController isFeedAdFilterOn];
+        sw.on = [XYABSettingsViewController isFeedAdFilterOn];
         [sw addTarget:self action:@selector(toggleFeedAd:) forControlEvents:UIControlEventValueChanged];
     }
     cell.accessoryView = sw;
@@ -97,6 +97,6 @@ static NSString * const kKeyFeedAd = @"feedAdFilterEnabled";
 }
 
 - (CGFloat)tableView:(UITableView *)tv heightForRowAtIndexPath:(NSIndexPath *)ip { return 60; }
-- (void)toggleSplash:(UISwitch *)s { [XYHSettingsViewController setSplashAdBlocked:s.isOn]; }
-- (void)toggleFeedAd:(UISwitch *)s { [XYHSettingsViewController setFeedAdFilterOn:s.isOn]; }
+- (void)toggleSplash:(UISwitch *)s { [XYABSettingsViewController setSplashAdBlocked:s.isOn]; }
+- (void)toggleFeedAd:(UISwitch *)s { [XYABSettingsViewController setFeedAdFilterOn:s.isOn]; }
 @end

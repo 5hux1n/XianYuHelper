@@ -1,9 +1,11 @@
-Package: im.mjh.xianyuhelper
-Name: 咸鱼助手
-Version: 1.0.0
-Description: 咸鱼助手 — 去除开屏广告，过滤搜索结果中的淘宝广告商品。
+Package: im.mjh.xianyuadblock
+Name: 闲鱼去广告助手
+Version: 2.0
+Description: 闲鱼去广告助手 — 拦截开屏广告（含切后台再回前台时的启动广告），过滤搜索结果中的淘宝广告商品。
 Author: junhong
 Maintainer: junhong
 Section: Tweaks
 Depends: mobilesubstrate, firmware (>= 15.0)
+Conflicts: im.mjh.xianyuhelper, im.mjh.xianyuhelper.roothide
+Replaces: im.mjh.xianyuhelper, im.mjh.xianyuhelper.roothide
 Architecture: iphoneos-arm64

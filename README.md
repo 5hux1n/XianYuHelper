@@ -11,16 +11,20 @@
 
 ## 安装与下载
 
-当前版本：**3.1.1**。
+当前测试版本：**3.1.2+2**。
+
+> 巨魔注入环境可能会导致 App 卡死、闪退，建议使用越狱环境，或降级使用 3.0.0 版本。
+
+[下载原线上 3.0.0 版本](https://github.com/5hux1n/XianYuHelper/releases/tag/v3.0.0)；插件源同时保留 3.0.0，可在包管理器选择降级。
 
 - [插件官网](https://xianyu.goforit.si)
-- [下载 3.1.1](https://github.com/5hux1n/XianYuHelper/releases/tag/v3.1.1)
+- [下载 3.1.2+2](https://github.com/5hux1n/XianYuHelper/releases/tag/v3.1.2+2)
 - 插件源：`https://apt.mjh.im`
 
 | 安装环境 | DEB |
 |---|---|
-| Rootless | `XianYuHelper_3.1.1_arm64.deb` |
-| RootHide | `XianYuHelper_3.1.1_arm64e.deb` |
+| Rootless | `XianYuHelper_3.1.2+2_arm64.deb` |
+| RootHide | `XianYuHelper_3.1.2+2_arm64e.deb` |
 
 RootHide 文件名中的 arm64e 表示包管理器安装方案；本次两个混淆包内的二进制均为 arm64。巨魔注入请选择 arm64 包，使用注入工具加载包内插件。无需单独下载 dylib。
 
@@ -34,9 +38,9 @@ RootHide 文件名中的 arm64e 表示包管理器安装方案；本次两个混
 
 自动发货仍为实验功能，请先用低价值测试订单验证规则，不建议用于高价值商品。退款中及申请退款的订单不自动发货。
 
-## 3.1.1 更新
+## 3.1.2+2 更新
 
-- 修复部分注入环境下启动闪退或卡死。
-- 修复安装时出现的解包警告。
+- 自动发货关闭时不再随启动接入聊天观测。
+- 发货进度条默认关闭，需手动开启。
 
 [完整更新日志](CHANGELOG.md) · [反馈入口](https://pingme.pm/xianyu)

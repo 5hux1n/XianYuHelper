@@ -11,17 +11,17 @@
 
 ## 安装与下载
 
-当前版本：**3.2.2**。保留 [3.1.2+2](https://github.com/5hux1n/XianYuHelper/releases/tag/v3.1.2%2B2) 供降级选择。
+当前版本：**3.2.3**。保留 [3.1.2+2](https://github.com/5hux1n/XianYuHelper/releases/tag/v3.1.2%2B2) 供降级选择。
 
 - [插件官网](https://xianyu.goforit.si)
-- [下载 3.2.2](https://github.com/5hux1n/XianYuHelper/releases/tag/v3.2.2)
+- [下载 3.2.3](https://github.com/5hux1n/XianYuHelper/releases/tag/v3.2.3)
 - 插件源：`https://apt.mjh.im`
 
 | 安装环境 | 下载 |
 |---|---|
-| Rootful（有根越狱） | [Rootful 版](https://xianyu.goforit.si/downloads/XianYuHelperRootful_3.2.2_arm64.deb) |
-| Rootless | [Rootless 版](https://xianyu.goforit.si/downloads/XianYuHelper_3.2.2_arm64.deb) |
-| RootHide | [RootHide 版](https://xianyu.goforit.si/downloads/XianYuHelper_3.2.2_arm64e.deb) |
+| Rootful（有根越狱） | [Rootful 版](https://xianyu.goforit.si/downloads/XianYuHelperRootful_3.2.3_arm64.deb) |
+| Rootless | [Rootless 版](https://xianyu.goforit.si/downloads/XianYuHelper_3.2.3_arm64.deb) |
+| RootHide | [RootHide 版](https://xianyu.goforit.si/downloads/XianYuHelper_3.2.3_arm64e.deb) |
 
 按越狱环境选择安装包。RootHide 文件名中的 arm64e 表示安装方案，包内二进制为 arm64。巨魔注入使用 Rootless 包，由注入工具加载包内插件，无需单独下载 dylib。
 
@@ -35,8 +35,14 @@
 
 自动发货仍为实验功能，请先用低价值测试订单验证规则，不建议用于高价值商品。退款中及申请退款的订单不自动发货。
 
-## 3.2.2 更新
+## 3.2.3 更新
 
-- 修复屏蔽启动广告时偶发闪退的问题。
+- 新增普通擦亮定时，可设置每天的执行时间，并选择错过设定时间后是否补执行。
+- 优化自动发货流程。订单确认发货后，再通过聊天发送附加内容；聊天暂不可用时，发货可继续，附加内容等待补发。发货结果未确认时，会自动复核订单状态，避免重复提交。
+- 修复待发货订单较多时反复超时的问题。补发前核对买家会话，无法确认商品归属时暂缓发送卡密或其他附加内容。
+- 修复「收货后评价」未生效的问题。已交付订单在买家确认收货后检查评价资格，支持每条交付规则配置多条好评文案，逐单随机选用。
+- 优化自动任务调度。自动发货运行时，翻新、擦亮等任务会暂时让路；当天已翻新的商品会直接跳过，减少重复检查。
+- 下线第三方服务交付，保留固定内容和卡密库存两种交付方式。
+- 调整「关于与支持」布局，将开发者关注入口移至页脚，并新增保存微信赞赏码到相册的功能。
 
 [完整更新日志](CHANGELOG.md) · [反馈入口](https://pingme.pm/xianyu)

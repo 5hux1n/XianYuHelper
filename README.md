@@ -11,17 +11,17 @@
 
 ## 安装与下载
 
-当前版本：**3.2.4**。保留 [3.1.2+2](https://github.com/5hux1n/XianYuHelper/releases/tag/v3.1.2%2B2) 供降级选择。
+当前版本：**3.2.5**，适用于 Rootless 和 RootHide。Rootful 继续提供 **3.2.4**。保留 [3.1.2+2](https://github.com/5hux1n/XianYuHelper/releases/tag/v3.1.2%2B2) 供降级选择。
 
 - [插件官网](https://xianyu.goforit.si)
-- [下载 3.2.4](https://github.com/5hux1n/XianYuHelper/releases/tag/v3.2.4)
+- [下载 3.2.5](https://github.com/5hux1n/XianYuHelper/releases/tag/v3.2.5)
 - 插件源：`https://apt.mjh.im`
 
 | 安装环境 | 下载 |
 |---|---|
-| Rootful（有根越狱） | [Rootful 版](https://xianyu.goforit.si/downloads/XianYuHelperRootful_3.2.4_arm64.deb) |
-| Rootless | [Rootless 版](https://xianyu.goforit.si/downloads/XianYuHelper_3.2.4_arm64.deb) |
-| RootHide | [RootHide 版](https://xianyu.goforit.si/downloads/XianYuHelper_3.2.4_arm64e.deb) |
+| Rootful（有根越狱） | [Rootful 3.2.4](https://xianyu.goforit.si/downloads/XianYuHelperRootful_3.2.4_arm64.deb) |
+| Rootless | [Rootless 3.2.5](https://xianyu.goforit.si/downloads/XianYuHelper_3.2.5_arm64.deb) |
+| RootHide | [RootHide 3.2.5](https://xianyu.goforit.si/downloads/XianYuHelper_3.2.5_arm64e.deb) |
 
 按越狱环境选择安装包。RootHide 文件名中的 arm64e 表示安装方案，包内二进制为 arm64。巨魔注入使用 Rootless 包，由注入工具加载包内插件，无需单独下载 dylib。
 
@@ -35,9 +35,10 @@
 
 自动发货仍为实验功能，请先用低价值测试订单验证规则，不建议用于高价值商品。退款中及申请退款的订单不自动发货。
 
-## 3.2.4 更新
+## 3.2.5 更新
 
-- 优化自动发货流程
-- 修复自动发货附加文本链路
+- 新增闲鱼多开客户端支持。
+- 优化各类自动任务的独立调度。
+- 优化失败任务的重试间隔。
 
 [完整更新日志](CHANGELOG.md) · [反馈入口](https://pingme.pm/xianyu)
